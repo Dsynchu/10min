@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickMart | Blinkit-Inspired Daily Needs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="#">QuickMart</a>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search groceries, essentials...">
+    </div>
+    <div class="cart-icon" id="cart-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Cart">
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Get Essentials in 10 Minutes</h1>
+      <p>Fresh groceries, dairy, and more—delivered to your door, fast!</p>
+    </div>
+  </section>
+
+  <!-- Special Slider Section -->
+  <section class="special-slider">
+    <div class="container">
+      <h2>Hot Deals</h2>
+      <div class="slider">
+        <div class="special-card" data-id="21">
+          <img src="shopping.webp" alt="Mango" />
+          <h4>Mango</h4>
+          <p class="original-price">₹120/kg</p>
+          <p class="price">₹90/kg</p>
+          <button class="add-to-cart">Add</button>
+        </div>
+        <div class="special-card" data-id="22">
+          <img src="coke.jpeg" alt="Coke" />
+          <h4>Coke</h4>
+          <p class="original-price">₹50/500ml</p>
+          <p class="price">₹35/500ml</p>
+          <button class="add-to-cart">Add</button>
+        </div>
+        <div class="special-card" data-id="23">
+          <img src="https://via.placeholder.com/150?text=Chips" alt="Chips" />
+          <h4>Chips</h4>
+          <p class="original-price">₹30/pack</p>
+          <p class="price">₹20/pack</p>
+          <button class="add-to-cart">Add</button>
+        </div>
+        <div class="special-card" data-id="24">
+          <img src="https://via.placeholder.com/150?text=Soap" alt="Soap" />
+          <h4>Soap</h4>
+          <p class="original-price">₹40/unit</p>
+          <p class="price">₹25/unit</p>
+          <button class="add-to-cart">Add</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="container">
+      <!-- Fruits -->
+      <div class="category-card">
+        <h2>Fruits</h2>
+        <div class="products">
+          <div class="product-card" data-id="1">
+            <img src="https://via.placeholder.com/150?text=Apple" alt="Apple" />
+            <h4>Apple</h4>
+            <p class="price">₹150/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="2">
+            <img src="https://via.placeholder.com/150?text=Banana" alt="Banana" />
+            <h4>Banana</h4>
+            <p class="price">₹60/dozen</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="25">
+            <img src="https://via.placeholder.com/150?text=Mango" alt="Mango" />
+            <h4>Mango</h4>
+            <p class="price">₹120/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="26">
+            <img src="https://via.placeholder.com/150?text=Orange" alt="Orange" />
+            <h4>Orange</h4>
+            <p class="price">₹80/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vegetables -->
+      <div class="category-card">
+        <h2>Vegetables</h2>
+        <div class="products">
+          <div class="product-card" data-id="3">
+            <img src="https://via.placeholder.com/150?text=Tomato" alt="Tomato" />
+            <h4>Tomato</h4>
+            <p class="price">₹40/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="4">
+            <img src="https://via.placeholder.com/150?text=Potato" alt="Potato" />
+            <h4>Potato</h4>
+            <p class="price">₹30/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="27">
+            <img src="https://via.placeholder.com/150?text=Onion" alt="Onion" />
+            <h4>Onion</h4>
+            <p class="price">₹35/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="28">
+            <img src="https://via.placeholder.com/150?text=Carrot" alt="Carrot" />
+            <h4>Carrot</h4>
+            <p class="price">₹50/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dairy -->
+      <div class="category-card">
+        <h2>Dairy</h2>
+        <div class="products">
+          <div class="product-card" data-id="5">
+            <img src="https://via.placeholder.com/150?text=Milk" alt="Milk" />
+            <h4>Milk</h4>
+            <p class="price">₹50/500ml</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="6">
+            <img src="https://via.placeholder.com/150?text=Cheese" alt="Cheese" />
+            <h4>Cheese</h4>
+            <p class="price">₹120/200g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="29">
+            <img src="https://via.placeholder.com/150?text=Yogurt" alt="Yogurt" />
+            <h4>Yogurt</h4>
+            <p class="price">₹40/200g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="30">
+            <img src="https://via.placeholder.com/150?text=Butter" alt="Butter" />
+            <h4>Butter</h4>
+            <p class="price">₹60/100g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="category-card">
+        <h2>Drinks</h2>
+        <div class="products">
+          <div class="product-card" data-id="7">
+            <img src="https://via.placeholder.com/150?text=Cola" alt="Cola" />
+            <h4>Cola</h4>
+            <p class="price">₹40/500ml</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="8">
+            <img src="https://via.placeholder.com/150?text=Juice" alt="Juice" />
+            <h4>Orange Juice</h4>
+            <p class="price">₹80/1L</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="31">
+            <img src="https://via.placeholder.com/150?text=Water" alt="Water" />
+            <h4>Bottled Water</h4>
+            <p class="price">₹20/1L</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="32">
+            <img src="https://via.placeholder.com/150?text=Tea" alt="Tea" />
+            <h4>Green Tea</h4>
+            <p class="price">₹100/100g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Snacks -->
+      <div class="category-card">
+        <h2>Snacks</h2>
+        <div class="products">
+          <div class="product-card" data-id="9">
+            <img src="https://via.placeholder.com/150?text=Chips" alt="Chips" />
+            <h4>Chips</h4>
+            <p class="price">₹20/pack</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="10">
+            <img src="https://via.placeholder.com/150?text=Chocolate" alt="Chocolate" />
+            <h4>Chocolate</h4>
+            <p class="price">₹50/100g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="33">
+            <img src="https://via.placeholder.com/150?text=Nuts" alt="Nuts" />
+            <h4>Mixed Nuts</h4>
+            <p class="price">₹150/200g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="34">
+            <img src="https://via.placeholder.com/150?text=Biscuits" alt="Biscuits" />
+            <h4>Biscuits</h4>
+            <p class="price">₹30/pack</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bakery -->
+      <div class="category-card">
+        <h2>Bakery</h2>
+        <div class="products">
+          <div class="product-card" data-id="11">
+            <img src="https://via.placeholder.com/150?text=Bread" alt="Bread" />
+            <h4>Bread</h4>
+            <p class="price">₹40/loaf</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="12">
+            <img src="https://via.placeholder.com/150?text=Cookies" alt="Cookies" />
+            <h4>Cookies</h4>
+            <p class="price">₹60/pack</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="35">
+            <img src="https://via.placeholder.com/150?text=Cake" alt="Cake" />
+            <h4>Cake Slice</h4>
+            <p class="price">₹50/piece</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="36">
+            <img src="https://via.placeholder.com/150?text=Muffin" alt="Muffin" />
+            <h4>Muffin</h4>
+            <p class="price">₹40/unit</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Care -->
+      <div class="category-card">
+        <h2>Personal Care</h2>
+        <div class="products">
+          <div class="product-card" data-id="13">
+            <img src="https://via.placeholder.com/150?text=Soap" alt="Soap" />
+            <h4>Soap</h4>
+            <p class="price">₹30/unit</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="14">
+            <img src="https://via.placeholder.com/150?text=Shampoo" alt="Shampoo" />
+            <h4>Shampoo</h4>
+            <p class="price">₹150/200ml</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="37">
+            <img src="https://via.placeholder.com/150?text=Toothpaste" alt="Toothpaste" />
+            <h4>Toothpaste</h4>
+            <p class="price">₹80/100g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="38">
+            <img src="https://via.placeholder.com/150?text=Deo" alt="Deodorant" />
+            <h4>Deodorant</h4>
+            <p class="price">₹120/150ml</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Household -->
+      <div class="category-card">
+        <h2>Household</h2>
+        <div class="products">
+          <div class="product-card" data-id="15">
+            <img src="https://via.placeholder.com/150?text=Detergent" alt="Detergent" />
+            <h4>Detergent</h4>
+            <p class="price">₹100/kg</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="16">
+            <img src="https://via.placeholder.com/150?text=Tissue" alt="Tissue" />
+            <h4>Tissue Paper</h4>
+            <p class="price">₹50/pack</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="39">
+            <img src="https://via.placeholder.com/150?text=Cleaner" alt="Cleaner" />
+            <h4>Floor Cleaner</h4>
+            <p class="price">₹90/500ml</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="40">
+            <img src="https://via.placeholder.com/150?text=TrashBag" alt="TrashBag" />
+            <h4>Trash Bags</h4>
+            <p class="price">₹60/10pcs</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breakfast -->
+      <div class="category-card">
+        <h2>Breakfast</h2>
+        <div class="products">
+          <div class="product-card" data-id="17">
+            <img src="https://via.placeholder.com/150?text=Cereal" alt="Cereal" />
+            <h4>Cereal</h4>
+            <p class="price">₹200/500g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="18">
+            <img src="https://via.placeholder.com/150?text=Oats" alt="Oats" />
+            <h4>Oats</h4>
+            <p class="price">₹150/400g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="41">
+            <img src="https://via.placeholder.com/150?text=Jam" alt="Jam" />
+            <h4>Jam</h4>
+            <p class="price">₹80/200g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="42">
+            <img src="https://via.placeholder.com/150?text=Honey" alt="Honey" />
+            <h4>Honey</h4>
+            <p class="price">₹150/250g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frozen -->
+      <div class="category-card">
+        <h2>Frozen</h2>
+        <div class="products">
+          <div class="product-card" data-id="19">
+            <img src="https://via.placeholder.com/150?text=IceCream" alt="Ice Cream" />
+            <h4>Ice Cream</h4>
+            <p class="price">₹100/500ml</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="20">
+            <img src="https://via.placeholder.com/150?text=Nuggets" alt="Nuggets" />
+            <h4>Chicken Nuggets</h4>
+            <p class="price">₹200/250g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="43">
+            <img src="https://via.placeholder.com/150?text=Pizza" alt="Pizza" />
+            <h4>Frozen Pizza</h4>
+            <p class="price">₹250/unit</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+          <div class="product-card" data-id="44">
+            <img src="https://via.placeholder.com/150?text=Peas" alt="Peas" />
+            <h4>Frozen Peas</h4>
+            <p class="price">₹80/200g</p>
+            <p class="delivery-time">10 min</p>
+            <button class="add-to-cart">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Detail Popup -->
+  <div class="product-detail" id="product-detail">
+    <div class="product-detail-content">
+      <button class="close-btn" id="close-detail">X</button>
+      <img id="detail-image" src="" alt="Product" />
+      <h2 id="detail-name"></h2>
+      <p id="detail-price" class="price"></p>
+      <p id="detail-delivery" class="delivery-time"></p>
+      <p id="detail-description"></p>
+      <button id="detail-add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-items">
+      <h3>Your Cart</h3>
+      <ul id="cart-items-list"></ul>
+    </div>
+    <div class="cart-footer">
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 QuickMart. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
